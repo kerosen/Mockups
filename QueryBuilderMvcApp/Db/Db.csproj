@@ -95,6 +95,8 @@
       <DependentUpon>AdventureWorks.tt</DependentUpon>
     </Compile>
     <Compile Include="Services\EmployeeService.cs" />
+    <Compile Include="Services\TestService.cs" />
+    <Compile Include="Utils\QueryableExtensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

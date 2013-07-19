@@ -1,0 +1,7 @@
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\bin\Debug\Db.dll.config
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\bin\Debug\Db.dll
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\bin\Debug\Db.pdb
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\bin\Debug\EntityFramework.dll
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\bin\Debug\EntityFramework.xml
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\obj\Debug\Db.dll
+D:\Repositories\Mockups\QueryBuilderMvcApp\Db\obj\Debug\Db.pdb

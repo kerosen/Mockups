@@ -24,5 +24,12 @@ namespace QueryBuilder.Controllers
 
            return View(model);
         }
+
+        public ActionResult Test()
+        {
+            QueryBuilderModel.Test();
+
+            return null;
+        }
     }
 }

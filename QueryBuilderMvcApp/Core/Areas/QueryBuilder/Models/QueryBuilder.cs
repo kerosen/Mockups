@@ -41,6 +41,10 @@ namespace QueryBuilder.Models
             var employees = EmployeeService.GetEmployees(filter1, filter2);
             Data = employees;
         }
-        
+
+        public static void Test()
+        {
+            TestService.Test();
+        }
     }
 }

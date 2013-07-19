@@ -1,0 +1,14 @@
+﻿@using MvcPopupApp.Models
+
+@model IEnumerable<Note>
+
+<ul class="NotesList">
+    @foreach (var data in Model)
+    {
+        <li>
+            <div>@data.Id</div>
+            <div>data.Title</div>
+            <div>@data.Body</div>
+        </li>
+    }
+</ul>

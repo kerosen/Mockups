@@ -1,0 +1,11 @@
+﻿@model QueryBuilder.Models.QueryBuilderModel
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<div>
+    @Html.ListBoxFor(m => m.Data, new SelectList(Model.Data, null), new { @style = "width: 500px; height: 600px; background-color: white", size=6 })
+</div>

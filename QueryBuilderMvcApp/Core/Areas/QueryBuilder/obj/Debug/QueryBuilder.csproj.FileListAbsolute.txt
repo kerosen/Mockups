@@ -1,0 +1,5 @@
+D:\Develop\QueryBuilderMvcApp\Core\Areas\QueryBuilder\obj\Debug\QueryBuilder.csprojResolveAssemblyReference.cache
+D:\Develop\QueryBuilderMvcApp\Core\bin\QueryBuilder.dll
+D:\Develop\QueryBuilderMvcApp\Core\bin\QueryBuilder.pdb
+D:\Develop\QueryBuilderMvcApp\Core\Areas\QueryBuilder\obj\Debug\QueryBuilder.dll
+D:\Develop\QueryBuilderMvcApp\Core\Areas\QueryBuilder\obj\Debug\QueryBuilder.pdb

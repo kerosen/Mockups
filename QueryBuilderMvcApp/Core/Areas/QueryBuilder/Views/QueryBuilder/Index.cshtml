@@ -1,0 +1,23 @@
+﻿@model QueryBuilder.Models.QueryBuilderModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("List", "QueryBuilder"))
+{
+    <fieldset>
+        <legend>filter1</legend>
+        <div>
+            @Html.LabelFor(m => m.Filter1)
+            @Html.TextBox("filter1", Model.Filter1, new { style = "width: 300px" })
+        </div>
+        <div>
+            @Html.LabelFor(m => m.Filter2)
+            @Html.TextBox("filter2", Model.Filter2, new { style = "width: 300px" })
+        </div>
+    </fieldset>
+    <input type="submit" value="List" />
+}

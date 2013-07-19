@@ -1,0 +1,32 @@
+﻿@using MefCalcApp.Models
+@using MefCalcApp.Calculator
+
+@model CalculationSet
+
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="~/Scripts/MefUtils.js"></script>
+<style type="text/css" >
+    div {
+        margin: 15px;
+    }
+</style>
+
+@using (Ajax.BeginForm("Calculate", new AjaxOptions() { UpdateTargetId = "resultDiv" }))
+{
+    @Html.HiddenFor(m => m.submitAction)
+    
+    <div>
+        @Html.TextBoxFor(m => m.Param1)
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.Param2)
+    </div>
+    foreach (var service in Model.GetCalculationServices())
+    {
+        <input type="submit" value="@service.MethodName" data-submitAction="@service.MethodName" />
+    }
+}
+<div id="resultDiv">
+</div>
+

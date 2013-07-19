@@ -1,0 +1,15 @@
+﻿@using NotesApp.Models
+@model IList<Note>
+
+<ul>
+    @foreach (var note in Model)
+    {
+        <li>
+            <div style="float: left; font-weight: bold">@note.Title</div>
+            <div style="float: left; margin-left: 15px">@note.Description</div>
+            <div style="float: left; margin-left: 15px">@Ajax.ActionLink("Edit", "EditNote", new { id = note.Id }, new AjaxOptions { UpdateTargetId = "noteContainer", OnSuccess = "ShowPopup", HttpMethod = "Get" })</div>
+        </li>
+    }
+</ul>
+
+

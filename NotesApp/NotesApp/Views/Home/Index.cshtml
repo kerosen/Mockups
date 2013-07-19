@@ -1,0 +1,36 @@
+﻿@using NotesApp.Models
+@model NotesModel
+
+<html>
+<head>
+    <title>Notes Main Form
+    </title>
+    
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.7.1.js"></script>
+    <script src="~/Scripts/jquery-ui-1.8.20.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Content/Scripts/Notes.js"></script>
+</head>
+<body>
+    <div onclick="addRandomNote()"><a href="#">add random note</a></div>
+    <div id="notesContainer">
+        @Html.Partial("Notes", Model.GetAll())
+    </div>
+    <div>@Ajax.ActionLink("add note", "Note", new AjaxOptions{ UpdateTargetId="noteContainer", OnSuccess="ShowPopup" }) </div>
+    <div id="noteContainer"></div>
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $("#noteContainer").dialog({
+                width: 320,
+                height: 240,
+                autoOpen: false
+            });
+        });
+
+    </script>
+</body>
+</html>

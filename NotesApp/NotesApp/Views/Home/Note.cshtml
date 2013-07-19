@@ -1,0 +1,22 @@
+﻿@using NotesApp.Models
+@model Note
+
+@using (Ajax.BeginForm(ViewBag.EditMode == false ? "AddNote" : "EditNote", "Home", new AjaxOptions
+{
+    HttpMethod = "Post",
+    OnSuccess = "(function(data) { handleModalSubmit(data, 'notesContainer', 'noteContainer');})" }))
+{
+    @Html.ValidationSummary(true)
+    <div style="margin: 12px">
+        <div style="width: 200px">@Html.LabelFor(m => m.Title)</div>
+        @Html.TextBoxFor(m => m.Title)
+        @Html.ValidationMessageFor(m => m.Title)
+        <div style="width: 200px">@Html.LabelFor(m => m.Description)</div>
+        @Html.TextBoxFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description)
+        <div style="margin: 12px">
+            <input type="submit" value="OK" />
+            <input type="button" value="Cancel" onclick="ClosePopup()" />
+        </div>
+    </div>
+}

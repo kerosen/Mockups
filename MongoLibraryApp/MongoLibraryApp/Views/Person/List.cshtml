@@ -1,0 +1,21 @@
+﻿<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script src="~/Scripts/knockout-2.1.0.js"></script>
+<script src="~/Scripts/PersonListViewModel.js"></script>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<ul data-bind="foreach: list">
+    <li data-bind="text: $data"></li>
+</ul>
+
+<script type="text/javascript">
+    var personListModel = new personList();
+    personListModel.addPerson(new person('Stan', 'Petre'));
+    personListModel.addPerson(new person('Gheorghe', 'Popescu'));
+
+    ko.applyBindings(personListModel);
+</script>
